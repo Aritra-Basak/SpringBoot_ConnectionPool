@@ -4,8 +4,9 @@ In this Spring Boot application I have implemented Connection Pool to make the d
 With Connection Pool I have also implemented 
 # 1.Prometheus (Prometheus collects and stores metric data as time-series data).
 # 2.Grafana (Grafana is an analytics and visualization web application that can ingest data from various sources and display it in customizable charts).
-With both of these I can monitor the connection pool in real time.
-To configure Prometheus I have used the prometheus.yml and to configure grafana I have used the ConnectionPool_Graph.json.
+With both of these I can monitor the connection pool in real time. 
+
+To configure Prometheus I have used the prometheus.yml and to configure grafana for visualizing the metrices I have used the SpringBoot_Hikari_CP_Monitoring_Dashboard.json(for monitoring Hikari CP ) and JVM_Monitoring_Dashboard.json(for monitoring the entire JVM).
 # Steps to configure Grafana and Prometheus with Spring Boot application:
 1. Add the required dependencies for monitoring the metrices like Actuator and many more.
 2. Configure the dependencies in the application.properties file.
