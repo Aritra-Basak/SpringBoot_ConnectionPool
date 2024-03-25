@@ -22,15 +22,20 @@ import com.demo.ConnectionPool.service.UserService;
  *
  */
 @RestController
-@RequestMapping(value ="/api/v1/users")
+@RequestMapping(value ="/api")
 public class Controller {
 	
 	@Autowired
 	UserService service;
 	
-	@GetMapping(value="/getUsers")
+	@GetMapping(value="/v1/users/getUsers")
 	public ResponseEntity<?> getAll(){
 		return new ResponseEntity<List<User>>(service.getAllUsers(),HttpStatus.OK);
+	}
+	
+	@GetMapping(value="/check")
+	public ResponseEntity <?> check(){
+		return new ResponseEntity<String>("Server is Up and Running!",HttpStatus.OK);
 	}
 
 }
