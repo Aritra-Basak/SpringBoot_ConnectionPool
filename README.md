@@ -4,7 +4,8 @@ In this Spring Boot application I have implemented Connection Pool to make the d
 With Connection Pool I have also implemented 
 # 1.Prometheus (Prometheus collects and stores metric data as time-series data).
 # 2.Grafana (Grafana is an analytics and visualization web application that can ingest data from various sources and display it in customizable charts).
-With both of these I can monitor the connection pool in real time. 
+With both of these I can monitor the connection pool in real time.
+![work_flow](https://raw.githubusercontent.com/Aritra-Basak/SpringBoot_ConnectionPool/main/images/workflow.webp)
 
 To configure Prometheus I have used the prometheus.yml and to configure grafana for visualizing the metrices I have used the SpringBoot_Hikari_CP_Monitoring_Dashboard.json(for monitoring Hikari CP ) and JVM_Monitoring_Dashboard.json(for monitoring the entire JVM).
 # Steps to configure Grafana and Prometheus with Spring Boot application:
@@ -14,8 +15,17 @@ To configure Prometheus I have used the prometheus.yml and to configure grafana 
 4. Then download Prometheus and after that just run it via prometheus.exe
 5. Then configure the Prometheus data via prometheus.yml.
 6. Then download Grafana and after installing run it via grafana.exe which is located in the - "C:\Program Files\GrafanaLabs\grafana\bin" path.
-7. Then add the Grafana dashboard from the given json and add the running prometheus data source.
+7. Log in to Grafana by using Username - "admin" and Password - "admin"
+8. Then add the Grafana dashboard from the given json and add the running prometheus data source as metrics data for Grafana.
 Note : Grafana runs at "http://localhost:3000/" and Prometheus runs at "http://localhost:9090/".
+
+# Results (Real time Monitoring):
+
+# 1. Connection Pool Dashboard
+![cp](https://github.com/Aritra-Basak/SpringBoot_ConnectionPool/blob/main/images/CP.png?raw=true)
+
+# 2. JVM Monitoring Dashboard
+![Jvm](https://github.com/Aritra-Basak/SpringBoot_ConnectionPool/blob/main/images/Jvm_Monitoring.png?raw=true)
    
 
 
